@@ -1,0 +1,8 @@
+vscode 설치 후
+open folder
+setting - emmet - Variables lang - ko
+extensions list
+1. Live Server : 
+2. Material Icon Theme
+3.
+
