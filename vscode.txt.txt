@@ -1,7 +1,29 @@
-vscode 설치 후
+
 open folder
 setting - emmet - Variables lang - ko
 extensions list
+
+<hn></hn>
+<p></p>
+
+<table>
+<tr>
+    <th></th>
+</tr>
+</table>
+
+<b></b>
+<i></i>
+
+<ol></ol> : 순서가 있는 리스트
+<ul></ul> : 순서가 없는 리스트
+<li></li> : 내부 요소
+
+***<a></a>*** 하이퍼 링크 삽입가능
+
+
+
+
 1. Live Server : 
 2. Material Icon Theme
 3.
