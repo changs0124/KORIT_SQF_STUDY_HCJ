@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 스타일 : link태그로 css파일 호출 -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- 내부 스타일 : head태그 안에 생성 -->
+    <!-- 해당 태그 사용시 자동으로 적용(인라인 스타일보다 범용성이 생김) -->
+    <style>
+        main {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        } 
+    </style>
+</head>
+<body>
+    <!-- 인라인 스타일 : 해당 태그안에 스타일 쓰기 -->
+    <div style="width: 100px; height: 100px; border: 1px solid black;"></div>
+    <div></div>
+    <main></main>
+    <main></main>
+    <header></header>
+</body>
+</html>

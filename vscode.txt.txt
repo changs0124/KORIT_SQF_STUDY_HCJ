@@ -21,6 +21,7 @@ extensions list
 
 ***<a></a>*** 하이퍼 링크 삽입가능
 
+font size / weight / color / decoration
 
 
 

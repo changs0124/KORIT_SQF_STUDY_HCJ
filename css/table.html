@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid #dbdbdb;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        thead th {
+            height: 80px;
+        }
+        tbody td {
+            height: 70px;
+        }
+
+        td, th {
+            border: 1px solid #dbdbdb;
+        }
+
+        .num {
+            width: 80px;
+        }
+        .age {
+            width: 100px;
+        }
+        .name {
+            width: 200px;
+        }
+
+        .bg-red {
+            background-color: green;
+        }
+
+        .line-red {
+            color: green;
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="num">번호</th>
+                <th class="name">이름</th>
+                <th class="age">나이</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="num">1</td>
+                <td class="name">손경태</td>
+                <td class="age">29</td>
+            </tr>
+            <tr>
+                <td class="num, bg-red">2</td>
+                <td class="name, line-red">신선애</td>
+                <td class="age">25</td>
+            </tr>
+            <tr>
+                <td class="num">3</td>
+                <td class="name">최단비</td>
+                <td class="age">29</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
