@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position 과도한 사용 X */
+        .username-inputbox {
+            position: relative;
+            width: 500px;
+            height: 50px;
+        }
+
+        .username-input {
+            box-sizing: border-box;
+            outline: none;
+            border-radius: 6px;
+            border: 1px soild black;
+            padding: 10px 80px 10px 10px;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            
+        }
+
+        .duplicate-button {
+            transform: translateY(-50%);
+            box-sizing: border-box;
+            position: absolute;
+            border: 1px solid #dbdbdb;
+            border-radius: 6px;
+            padding: 5px;
+            right:10px;
+            top: 50%;
+        
+            background-color: transparent;  /*투명(부모의 색상 사용)*/
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="username-inputbox">
+        <input type="text" class="username-input">
+        <button class="duplicate-button">중복확인</button>
+    </div>
+</body>
+</html>

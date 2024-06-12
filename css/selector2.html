@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식 선택자 : > */
+        main > h1 {
+            color: red;
+        }
+
+        div > .title {
+            color: blue;
+        }
+
+        div > div > .title2 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>제목1</h1>
+        <div>
+            <h1>제목2</h1>
+        </div>
+    </main>
+    <div>
+        <div class="title">제목3</div>
+        <div>
+            <div class="title">제목4</div>
+            <div class="title2">제목5</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .or-box {
+            width: 300px;
+        }
+
+        .or {
+            position: relative;
+        }
+
+        .or::before,
+        .or::after {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            content: "";
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            border-top: 1px solid #dbdbdb;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="or-box">
+        <span class="or">또는</span>
+    </div>
+</body>
+</html>
