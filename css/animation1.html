@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            0% {
+               left: 0px;     
+            }
+            100% {
+                left: 300px;
+            }
+        }
+        
+        .box {
+            position: absolute;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            animation-name: move;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

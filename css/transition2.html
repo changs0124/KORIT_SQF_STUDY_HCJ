@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            width: 300px;
+            height: 300px;
+        }
+
+        .box2 {
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box:active > .box2 {
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
