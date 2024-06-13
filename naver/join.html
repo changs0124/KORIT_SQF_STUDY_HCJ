@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/join.css">
+    </head>
+    <body>
+        <div class="inner">
+            <h1 class="logo-naver">
+                <a href="https://www.naver.com" class="link"></a>
+            </h1>
+            <div class="content">
+                <div class="form-content">
+                    <div class="join-toggle">
+                        <input type="checkbox" id="join-toggle">
+                        <label for="join-toggle">
+                            실명 인증된 아이디로 가입
+                        </label>
+                    </div>
+                    <div class="form-list">
+                        <div class="form-item user-item">
+                            <input type="text" class="form-input user" placeholder="아이디">
+                        </div>
+                        <div class="form-item password-item">
+                            <input type="text" class="form-input" placeholder="비밀번호">
+                        </div>
+                        <div class="form-item email-item">
+                            <input type="text" class="form-input" placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)">
+                        </div>
+                    </div>
+                    <div class="form-list">
+                        <div class="form-item name-item">
+                            <input type="text" class="form-input" placeholder="이름">
+                        </div>
+                        <div class="form-item birthday-item">
+                            <input type="text" class="form-input" placeholder="생년월일 8자리">
+                        </div>
+                        <div class="form-item telecom-item">
+                            <input type="text" class="form-input form-select" placeholder="통신사 선택" readonly>
+                            <div class="select-icon"></div>
+                            <table class="telecom-list">
+                                <tbody>
+                                    <tr>
+                                        <td>SKT</td>
+                                        <td>SKT 알뜰폰</td>
+                                    </tr>
+                                    <tr>
+                                        <td>KT</td>
+                                        <td>KT 알뜰폰</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG U+</td>
+                                        <td>LG U+ 알뜰폰</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-adult">
+                                <div class="adult-group">
+                                    <input type="radio" id="male" name="gender">
+                                    <label for="male">남자</label>
+                                    <input type="radio" id="female" name="gender">
+                                    <label for="female">여자</label>
+                                </div>
+                                <div class="adult-group">
+                                    <input type="radio" id="foreigner1" name="foreigner">
+                                    <label for="foreigner1">내국인</label>
+                                    <input type="radio" id="foreigner2" name="foreigner">
+                                    <label for="foreigner2">외국인</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item phone-item">
+                            <input type="text" class="form-input" placeholder="휴대전화번호">
+                        </div>
+                    </div>
+                    <div class="form-list">
+                        <div class="form-item agree-item">
+                            <input type="text" class="form-input form-select" placeholder="[필수]인증 약관 전체동의">
+                            <div class="select-icon"></div>
+                        </div>
+                        <div class="form-item">
+                            <input type="radio" class="form-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="button-submit-wrap">
+                    <button class="button-submit">인증요청</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
