@@ -7,27 +7,29 @@ function modifyUser(user, target, value) {
 }
 
 function main() {
-    const user = {
+    let user = {
         username: "admin",
         password: "1234"
     }
-    console.log(user);
+    // console.log(user);
 
     const newUser = modifyUser(user, "username", "test-user");
-    console.log(newUser);
+    // console.log(newUser);
 
     const newUser2 = modifyUser(newUser, "password", "1111");
-    console.log(newUser2);
+    // console.log(newUser2);
 
     const userList = [ user, newUser ];
+    console.log(userList);
+
     const newUserList = [...userList];
 
     // 스프레드 -> 깊은 복사(주소값을 새로만들어 안에 들어있는 값들만 옮기는 것을 의미)
-    console.log(newUserList);
+    // 값을 추가하기 위해 사용
+    // console.log(newUserList);
     
     // 얉은 복사 -> 리스트명만 바꿈(기존 리스트값이 바뀌면 같이 바뀜)
     const userList2 = userList;
-
 }
 
 main();

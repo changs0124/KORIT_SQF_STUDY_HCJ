@@ -28,6 +28,15 @@ function createUser3(username, password, name, email) {
     }
 }
 
+function createUser(username, password, name, email) {
+    return {
+        username: "username",
+        password: "password",
+        name: "name",
+        email:"email"
+    }
+}
+
 function main() {
     const username = "admin";
     const password = "1234";
@@ -41,7 +50,6 @@ function main() {
     console.log(user)
     console.log(user2)
     console.log(user3)
-
 }
 
 main();
