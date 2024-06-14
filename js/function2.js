@@ -22,7 +22,7 @@ console.log(add2(10, 20));
 
 // 익명함수 - 함수명 삭제
 const sub2 = function (x, y) {
-    return x = y;
+    return x - y;
 }
 
 console.log(sub2(20, 10));
@@ -52,9 +52,7 @@ function main() {
     const test = () => {
         console.log("테스트 함수 호출");
     }
-
     test();
 }
-
 main();
 

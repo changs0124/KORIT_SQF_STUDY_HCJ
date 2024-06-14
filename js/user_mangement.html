@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid #dbdbdb;
+            border-collapse: collapse;
+            margin: 10px;
+        }
+
+        th, td {
+            border: 1px solid #dbdbdb;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input
+        type="text" class="username-input"
+        name="username" placeholder="username"
+        onkeydown="handleUserInputKeyDown(event)"
+        >
+        <input
+        type="text" class="password-input"
+        name="password" placeholder="passowrd"
+        onkeydown="handleUserInputKeyDown(event)"
+        >
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>사용자명</th>
+                <th>비밀번호</th>
+            </tr>
+        </thead>
+        <tbody class="user-table-body">
+           
+        </tbody>
+    </table>
+    <script src="user_management.js"></script>
+</body>
+</html>
