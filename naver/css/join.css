@@ -319,10 +319,6 @@
     border-bottom-right-radius: 6px;
 }
 
-agree-list {
-
-}
-
 .agree-item:focus ~ .agree-list {
     display: table;
 }
