@@ -129,7 +129,11 @@ function handleUserCheck(e) {
     for(let i = 0; i < checkBoxList.length; i++) {
         const checkBock = checkBoxList[i];
         if(e.target === checkBock) {
-            console.log(e.target.user);
+            user = userList[i];
+            const userInputBox = document.querySelector(".user-input-box");
+            userInputBox.innerHTML = user.map
+            
+            
 
         }
          
