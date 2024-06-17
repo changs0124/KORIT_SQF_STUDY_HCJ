@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-box">
+        <div id="input1">
+            <input type="text">
+        </div>    
+        <div id="input2">
+            <input type="text">
+        </div>
+    </div>
+    <div>
+        <button onclick="handleButtonClick(event);">확인</button>
+    </div>
+    <script>
+        // getElement~
+        const bodyList = document.getElementsByTagName("body");
+        const body = bodyList[0];
+        const divList = document.getElementsByTagName("div");
+        // ClassName -> .이 필요가 없음 || querySelector의 경우 클래스나 태그가 들어오기 때문에 클래스를 나타내는 .을 찍음
+        const mainBoxList = body.getElementsByClassName("main-box");
+
+
+        const input1 = mainBoxList[0].getElementsByTagName("div")[0].getElementsByTagName("input")[0];
+        const input1_1 = document.getElementsByTagName("input")[0];
+        const [ input1_1_1 ] = document.getElementById("input1").getElementsByTagName("input");
+
+        console.log(bodyList);
+        console.log({body});
+        // 배열에는 중괄호를 바로 사용 X -> key값을 주고 객체로 감싸기
+        console.log({mainBox: divList[0]});
+        console.log({mainBox: mainBoxList[0]});
+        //////////////////////////////////////////////////////////
+        // QuerySelector
+        const input1_1_1_1 =  document.querySelector("#input1 > input");
+        console.log({input1_1_1_1});
+        const inputList = document.querySelectorAll("input");
+        console.log({input: inputList})
+        // 하나의 클래스만 해당 태그에 사용되는 경우 굳이 인덱스값을 쓰는 것보다 해당 코드를 사용하는 게....
+        const  input1_1_1_1_1 = document.querySelector("input");
+        console.log(input1_1_1_1_1);
+        
+        const button = document.querySelector("button");
+        console.log(button.getAttribute("onclick"));
+        console.log(button.setAttribute("onclick","alert('test');"));
+        // JS에서 사용 : 해당 속성에 바로 함수 대입 가능
+        button.onclick = () => {
+            alert("test2");
+        }
+
+        button.onclick = handleButtonClick;
+
+        button.onclick = () => {
+            const [ input_1, input_2 ]  = document.querySelectorAll("input");
+            alert(`name: ${input_1.value}\npassword: ${input_2.value}`);
+        }
+
+        // React에서 사용
+        function handleButtonClick(e) {
+            const [ input_1, input_2 ]  = document.querySelectorAll("input");
+            alert(`name: ${input_1.value}\npassword: ${input_2.value}`);
+        }
+
+        // innerText, ineerHTML
+        // 태그 적용의 유무
+    </script>
+</body>
+</html>

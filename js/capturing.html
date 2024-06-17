@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            background-color: lightblue;
+            padding: 50px;
+            text-align: center;
+        }
+        .middle {
+            background-color: lightgreen;
+            padding: 50px;
+            text-align: center;
+        }
+        .inner {
+            background-color: coral;
+            padding: 50px;
+            text-align: center;
+        }
+        /* div:hover {
+            background-color: white;
+        } */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        외부 박스
+        <div class="middle">
+            중간 박스
+            <div class="inner">
+                내부 박스
+            </div>
+        </div>
+    </div>
+    <script>
+        const outer = document.querySelector(".outer");
+        const middle = document.querySelector(".middle");
+        const inner = document.querySelector(".inner");
+
+        // 캡쳐링
+        // outer.addEventListener("click", () => alert("outer 캡쳐링"), true);
+        // middle.addEventListener("click", () => alert("middle 캡쳐링"), true);
+        // inner.addEventListener("click", () => alert("inner 캡쳐링"), true);
+        
+        // 버블링
+        // outer.addEventListener("click", () => alert("outer 버블링"));
+        // middle.addEventListener("click", () => alert("middle 버블링"));
+        // inner.addEventListener("click", () => alert("inner 버블링"));
+        
+        outer.addEventListener("click", () => alert("outer 버블링"));
+        middle.addEventListener("click", (e) => {
+            e.stopPropagation();                    // 이벤트 전파 방지, middle객체에 등록된 다른 이벤트의 실행도 막는다.
+            alert("middle 버블링")
+        });
+        // inner.addEventListener("click", (e) => {
+        //     e.stopPropagation();                 // 이벤트 전파 방지
+        //     alert("inner 버블링")
+        // });
+
+    </script>
+</body>
+</html>
