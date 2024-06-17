@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON(Javascript Object Notation) 데이터 전송 표준 객체
+        const user = {
+            username: "aaa",
+            password: "1234",
+            name: "김준일",
+        }
+
+        const jsonUser = JSON.stringify(user);
+        const jsonParseUser = JSON.parse(jsonUser);
+
+        console.log(user);
+        console.log(jsonUser);
+        
+        console.log(user.username);
+        console.log(jsonUser.username);     // 문자열이기 때문에 참조 불가능
+
+        console.log(user.username);
+        console.log(jsonUser.username);
+        console.log(jsonParseUser.username);
+
+        const users = [ user, { ...user, username: "bbb"}];
+        console.log(users);
+        const jsonUsers = JSON.stringify(users);
+        console.log(jsonUsers);
+
+        const jsonParseUsers = JSON.parse(jsonUsers);
+        console.log(jsonParseUsers);
+        /*
+           "{
+                "key": "vlaue",
+                "key": vlaue2
+            }"
+        */
+
+    </script>
+</body>
+</html>

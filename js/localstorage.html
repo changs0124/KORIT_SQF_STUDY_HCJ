@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="addText(event)">
+    <script>
+        const textInput = document.querySelector("input");
+        const lsTextList = localStorage.getItem("list");
+        // console.log(lsTextList);
+
+        let textList = !lsTextList ? [] : JSON.parse(lsTextList);
+
+        function addText(e) {
+            const textValue = e.target.value;
+            if(e.keyCode === 13) {
+                textList = [ ...textList, textValue ];
+                e.target.value = "";
+                // console.log(textList);
+                localStorage.setItem("list", JSON.stringify(textList));
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
