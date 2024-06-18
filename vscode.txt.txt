@@ -3,6 +3,8 @@ open folder
 setting - emmet - Variables lang - ko
 extensions list
 
+file - preference - setting - Custom Browser
+
 <hn></hn>
 <p></p>
 
