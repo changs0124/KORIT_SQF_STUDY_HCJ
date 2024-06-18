@@ -18,9 +18,3 @@ console.log(user);
 console.log(user.username);
 console.log(user.password);
 user.print();
-
-const user2 = {
-
-}
-
-
