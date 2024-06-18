@@ -139,5 +139,5 @@ function handleUserCheck(e) {
          
     }
     
-    
+    console.log();
 };
