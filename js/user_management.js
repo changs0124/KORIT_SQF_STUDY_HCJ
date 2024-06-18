@@ -74,7 +74,7 @@ function handleUserInputKeyDown(e) {
             // 포커스 이동
             usernameInput.focus();
         }
-        if(e.target.name === "username") {
+        if(e.target.name === "username") 
             // 포커스 이동
             passwordInput.focus();
         }
@@ -109,7 +109,7 @@ function handleUserInputKeyDown(e) {
     };
 
     console.log(e.target.name);
-};
+
 
 function saveUserList() {
     // 로컬스토리지에 배열을 JSON타입으로 바꿔서 저장(key값은 무조건 문자열)

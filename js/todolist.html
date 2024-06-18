@@ -6,12 +6,12 @@
     <title>Document</title>
     <style>
         html, body {
-            height: 100%;
+            margin: 0;
             background-color: #fafafa;
         }
         .container {
             box-sizing: border-box;
-            margin: 100px auto;
+            margin: 50px auto;
             border: 1px solid #dbdbdb;
             padding: 20px;
             width: 400px;
@@ -38,12 +38,12 @@
             font-size: 16px;    
             cursor: pointer;
         }
-        .todo-submit {
+        .button {
             margin-left: 5px;
             border: 1px solid #dbdbdb;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding: 5px 10px;
             background-color: white;
+            font-size: 12px;
             font-weight: 600;
             color: #555555;
             cursor: pointer;
@@ -59,8 +59,86 @@
             box-sizing: border-box;
             margin-top: 10px;
             border: 1px solid #dbdbdb;
+            padding: 10px;
             width: 100%;
             height: 480px;
+        }
+        .todo-list-container {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            list-style-type: none;
+            /* 스크롤바 숨김 */
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .todo-card {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #dbdbdb;
+            padding: 10px;
+            width: 100%;
+            height: 100px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0px 0px 4px #00000022 inset;
+            }
+        }
+        .todo-date {
+            margin: 0;
+            font-size: 13px;
+        }
+        .todo-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            flex-grow: 1;
+            font-size: 14px;
+        }
+        .todo-buttons {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            & > button {
+                margin-left: 5px;
+            }
+        }
+        .modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #00000066;
+        }
+        .modal-show { 
+            display: flex;
+        }
+        .modal-edit-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 360px;
+            height: 200px;
+            background-color: white;
+        }
+        .modal-title {
+            margin: 0;
+            font-size: 18px;
+            cursor: default;
         }
     </style>
 </head>
@@ -68,12 +146,34 @@
     <div class="container">
        <h1 class="title">TODO LIST</h1>
        <div class="input-box">
-            <input type="text" class="todo-input">
-            <button class="todo-submit">확인</button>
+            <input type="text" class="todo-input" name="todo-content" onkeydown="handleTodoInputKeyDown(event)">
+            <button class="button todo-submit" onclick="handleTodoOkClick(event)">확인</button>
        </div>
        <div class="todo-container">
-
+            <ul class="todo-list-container">
+                <!-- <li class="todo-card">
+                    <h3 class="todo-date">2024-06-18 12:39</h3>
+                    <p class="todo-content">오늘 할 일</p>
+                    <div class="todo-buttons">
+                        <button class="button edit-button">수정</button>
+                        <button class="button delete-button">삭제</button>
+                    </div>
+                </li> -->
+            </ul>
        </div>
+    </div>
+    <div class="modal" onclick="handleModalBackgroundClick()">
+        <!-- 상위로의 전파 막기 = event.stopPropagation -->
+        <!-- <div class="modal-edit-container" onclick="event.stopPropagation()">
+            <h3 class="modal-title">TODO 수정하기</h3>
+            <div class="input-box">
+                <input type="text" class="todo-input">
+            </div>
+            <div class="todo-buttons">
+                <button class="button">확인</button>
+                <button class="button">취소</button>
+            </div>
+        </div> -->
     </div>
     <script src="todolist.js"></script>
 </body>
